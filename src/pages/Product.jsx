@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Footer from "../components/Footer";
 import Newsletter from "../components/Newsletter";
 import { mobile } from "../responsive";
+import { useParams } from "react-router";
 
 const Container = styled.div``;
 
@@ -113,6 +114,7 @@ const Button = styled.button`
 `;
 
 const Product = () => {
+  const { id } = useParams();
   return (
     <Container>
       <Wrapper>
@@ -120,7 +122,7 @@ const Product = () => {
           <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" />
         </ImgContainer>
         <InfoContainer>
-          <Title>Denim Jumpsuit</Title>
+          <Title>Denim Jumpsuit {id}</Title>
           <Desc>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
             venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at

@@ -18,6 +18,9 @@ const App = () => {
       <Announcement />
       <Navbar />
       <Switch>
+        <Route path='/product-list/:id'>
+          <Product />
+        </Route>
         <Route path='/product'>
           <Product />
         </Route>
@@ -29,6 +32,9 @@ const App = () => {
         </Route>
         <Route path='/login'>
           <Login />
+        </Route>
+        <Route path='/:id'>
+          <Product />
         </Route>
         <Route path='/'>
           <Home />
